@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Sign up</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Raleway',sans-serif;
+        }
+        body{
+            background-image: url("../images/bg1.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin:4rem;
+        }
+        
+        div.main{
+            margin:auto;
+            background-color: wheat;
+            width: 40%;
+            padding:1px;
+            padding-bottom: 20px;
+            border: 2px solid #460a10;
+            display: flex;
+            flex-direction: column;
+        }
+        .top_background{
+            background-image: url("../images/bg2.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height:150px;
+            width:100%;
+            padding:40px;
+            border-bottom-left-radius: 100%;
+            border-bottom-right-radius: 100%;
+        }
+        .heading{
+            font-weight: bold;
+            font-size: 30px;
+            color:white;
+            word-spacing: 10px;
+            margin-left: 25%;
+        }
+        .form{
+            width:90%;
+            padding:20px;
+            padding-left:10%;
+            margin: auto;
+        }
+        form .input_group , .address{
+             margin: .5px;
+             margin-bottom: 10px;
+             color:#460a10;
+             font-size: 15px;
+             font-weight: bold;
+         }
+         form .text_area .desc{
+             border:2px solid #460a10;
+             border-radius: 10px;
+             width:80%;
+             margin: .5px;
+             margin-bottom: 20px;
+             color:#460a10;
+             font-size: 15px;
+             font-weight: bold;
+             padding: 20px;
+         }
+        form .input_group input , .address input[name="street_address"] , .address input[name="city"]{
+            width:80%;
+            padding:10px;
+            border:2px solid #460a10;
+            font-weight: bold;
+            border-radius: 10px;
+         }
+         
+         select{
+             width:40%;
+             padding:10px;
+             border:2px solid #460a10;
+             border-radius: 10px;
+             color:#460a10;
+             font-size:15px;
+             font-weight: bold;
+         }
+         form .input_group .checkbox_group input{
+             margin-right: 10px;
+             padding:0px;
+             width:20px;
+         }
+         #sign_up_btn{
+            margin:auto;
+            padding : .5rem;
+            color:white;
+            font-weight: bold;
+            font-size: 20px;
+            width:150px;
+            height:40px;
+            background-image:  radial-gradient(#ac163e,#460a16,#350715);
+            border-radius: 3rem;
+            cursor: pointer;
+         }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="top_background">
+             <span class="heading">Create Account</span>
+        </div>
+        <form>
+            <div class="form">
+                <div class="input_group">
+                    <label>Company Name</label><br/>
+                    <input type="text" name="company_name"/>
+                </div>
+                <div class="text_area">
+                    <label><b>Company's Description</b></label><br/>
+                    <textarea class="desc" name="description"> </textarea>
+                </div>
+                <div class="input_group">
+                    <label>Certifications (if any)</label><br>
+                    <input type="text" name="certifications"/>
+                </div>
+                <div class="input_group">
+                    <label>Years in Business</label><br/>
+                    <input type="number" name="years_in_business" min="0" max="100"/>
+                </div>
+                <div class="address">
+                    <label>Address</label>
+                    <br/>
+                    <input type="text" name="street_address"/>
+                    <br><label>Street Address</label>
+                    <br/>
+                    <input type="text" name="city" style="width:40%"> 
+                    <select class="country">
+                        <option value="">Select Country</option>
+                        <option value="india">India</option>
+                        <option value="usa">USA</option>
+                        <option value="china">China</option>
+                        <option value="japan">Japan</option>
+                        <option value="brazil">Brazil</option>
+                        <option value="nepal">Nepal</option>
+                        <option value="canada">Canada</option>
+                        <option value="germany">Germany</option>
+                        <option value="australia">Australia</option>
+                        <option value="sri_lanka">Sri Lanka</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                      </select> 
+                    <br>
+                    <label>City</label>
+                    <label style="margin-left: 40%;" >Country</label>
+                </div>
+                <div class="input_group">
+                    <input type="checkbox" name="t&c" style=" margin-right:4px; width:20px;"/>
+                    <a class="t&c_anchor" href="">Accept the terms and conditions. </a>
+                </div>
+                <input type="submit" value="Sign Up" id="sign_up_btn" />
+            </div>
+        </form>
+    </div>
+</body>
+</html>
