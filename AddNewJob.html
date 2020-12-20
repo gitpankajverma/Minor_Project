@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <title>Add New Job</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Raleway',sans-serif;
+        }
+        #root{
+            background:#23050e;
+            margin:50px 0;
+            width:100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .mainDiv
+        {
+            width:420px;
+            padding:10px;
+            border:3px solid wheat;
+            background: #fff;
+            border-radius: 3px;
+            border:2px solid #460a10;
+            box-shadow: 3px 5px 8px #460a10;
+        }
+        .mainDiv h2{
+            text-align: center;
+            margin: 20px;
+            font-size: 35px;
+            color:#460a10;
+            text-shadow: 2px 3px 4px #9c163e;
+        }
+        form .input_group{
+             margin-bottom: 20px;
+             color:#460a10;
+             font-size: 18px;
+             font-weight: bold;
+             margin-left: 10%;
+         }
+         form .input_group input{
+            width:90%;
+            padding:10px;
+            border:2px solid #460a10;
+         }
+         form .input_group .job_desc
+         {
+            width:90%;
+            height: 70px;
+            padding:10px;
+            font-weight: bold;
+            font-size: 16px;
+            border:2px solid #460a10;
+         }
+         form .input_group .checkbox_group input{
+             margin-right: 10px;
+             padding:0px;
+             width:20px;
+         }
+         #add_job_btn{
+            margin-left: 30%;
+            padding : .5rem;
+            color:white;
+            font-weight: bold;
+            font-size: 20px;
+            width:150px;
+            height:40px;
+            background-image:  radial-gradient(#ac163e,#460a16,#350715);
+            border-radius: 3rem;
+            cursor: pointer;
+         }
+    </style>
+</head>
+<body id="root">
+    <div class="mainDiv">
+        <h2 >Add New Job</h2>
+        <form>
+            <div class="input_group">
+                <label>Job Title</label><br/>
+                  <input type="text" class="job_title"  />
+            </div>
+            <div class="input_group">
+                <label>Job Description</label><br/>
+                  <textarea class="job_desc" value="Enter The Job description here"> </textarea>
+            </div>
+            <div class="input_group">
+                <label><b>Skills</b></label>
+                <div class="checkbox_group">
+                    <input type="checkbox" value="c" name="c" /> C <br>
+                    <input type="checkbox" value="c++" name="c++"/> C++ <br> 
+                    <input type="checkbox" value="java" name="java"/> Java <br>
+                    <input type="checkbox" value="python" name="python"/> Python <br>
+                    <input type="checkbox" value="html" name="html"/> HTML <br>
+                    <input type="checkbox" value="css" name="css"/> CSS <br>
+                    <input type="checkbox" value="js" name="js"/> Javascript<br>
+                    <input type="checkbox" value="cloud_computing" name="cc"/> Cloud computing<br>
+                    <input type="checkbox" value="django" name="django"/> Django <br>
+                    <input type="checkbox" value="react_js" name="react" /> React.js<br>
+                    <input type="checkbox" value="node_js" name="node" /> Node.js<br>
+                    <input type="checkbox" value="machine_learning" name="machine_learning" /> Machine Learning<br>
+                    <input type="checkbox" value="flutter" name="flutter"/> Flutter<br>
+                    <input type="checkbox" value="php" name="php"/> PHP<br>
+                    <input type="checkbox" value="angular" name="angular"/> Angular<br>
+                    <input type="checkbox" value="mern_stack" nam="mern"/> MERN<br>
+                    <input type="checkbox" value="mean_stack" name="mean"/> MEAN <br>
+                </div>
+            </div>
+            <div class="input_group">
+              <label>Years of experience </label>
+              <input type="number" name="yoe" min="1" max="100" step="1"? />
+            </div>
+            <div class="input_group">
+                <label>CTC</label><br/>
+                  <input type="text" name="ctc" class="ctc" placeholder="Salary Amount" />
+            </div>
+            <input type="submit" value="Add Job" id="add_job_btn" />
+        </form>
+    </div>
+</body>
+</html>

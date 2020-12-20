@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Advent+Pro&family=Slabo+27px&display=swap" rel="stylesheet">
+        <title>Company Home Page</title>
+        <link rel="stylesheet" type="text/css" href="./HomePage.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="logo"><p>WORK'n'APPOINT</p></div>
+            <ul class="test">
+                <li class="list">
+                    <a href="#footer_anchor" class="five" id="con">Contact Us</a>
+                </li>
+                <li class="list">
+                  <a href="#about" class="five">About</a>
+                </li>
+                <li class="list">
+                    <button id="all_job_btn">All Jobs </button>
+                </li>
+                <li class="list">
+                    <button  id="our_job_btn">Our Jobs </button>
+                </li>
+                <li class="list">
+                    <a href="./AddNewJob.html" target="_blank" >Add Jobs</a>
+                </li>
+            </ul>
+        </div>
+        <div class="parent">
+            <div class="sidebar">
+                <h2>SKILLS</h2>
+                <ul>
+                    <li><a href="#">Html</a></li>
+                    <li><a href="#">Cascading style sheets</a></li>
+                    <li><a href="#">Javascript</a></li>
+                    <li><a href="#">Python</a></li>
+                    <li><a href="#">Cloud Computing</a></li>
+                    <li><a href="#">Data Structures</a></li>
+                    <li><a href="#">Machine Learning</a></li>
+                    <li><a href="#">C</a></li>
+                    <li><a href="#">C++</a></li>
+                    <li><a href="#">Java</a></li>
+                    <li><a href="#">Django</a></li>
+                    <li><a href="#">Flutter</a></li>
+                    <li><a href="#">Mean</a></li>
+                    <li><a href="#">Mern Stack</a></li>
+                    <li><a href="#">PHP</a></li>
+                    <li><a href="#">MySql</a></li>
+                    <li><a href="#">AutoCad</a></li>
+                    <li><a href="#">Salesforce</a></li>
+                    <li><a href="#">Blockchains</a></li>
+                    <li><a href="#">Automation</a></li>
+                </ul>
+            </div>
+            <div class="mid">
+
+            </div>
+            <div class="right-sidebar">
+
+            </div>
+        </div>
+        <!--footer-->
+        <div class="footer">
+            <div class="footer-content">
+                <a name="footer_anchor"></a>
+                <div class="footer-section contact-us">
+                    <h2 class="logo-text">Contact Us</h2>
+                    <p class="para">9306228235</p>
+                    <p class="para">kaur.26parneet@gmail.com</p>
+                </div>
+                <div class="footer-section links">
+                    <h2 class="logo-text">Links</h2>
+                    <ul class="new">
+                        <a href="#"><li class="list1">Events</li></a>
+                        <a href="#"><li class="list1">Team</li></a>
+                        <a href="#"><li class="list1">Mentors</li></a>
+                        <a href="#"><li class="list1">Terms and Conditions</li></a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                &copy;worknappoint.com | Designed By Rahul,Pankaj,Parneet
+            </div>
+        </div>
+        <script>
+            const allJobBtn = document.getElementById("all_job_btn");
+            const ourJobBtn = document.getElementById("our_job_btn");
+
+            allJobBtn.addEventListener("click", ()=>{
+                allJobBtn.style.fontWeight ="bold";
+                allJobBtn.style.color = "#be1b4c";
+                ourJobBtn.style.fontWeight ="lighter";
+                ourJobBtn.style.color = "#fff";
+            });
+
+            ourJobBtn.addEventListener("click", ()=>{
+                ourJobBtn.style.fontWeight ="bold";
+                ourJobBtn.style.color = "#be1b4c";
+                allJobBtn.style.fontWeight ="lighter";
+                allJobBtn.style.color = "#fff";
+            });
+        </script>
+    </body>
+    
+</html>
