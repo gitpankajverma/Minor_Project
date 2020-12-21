@@ -4,27 +4,27 @@
         <link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Advent+Pro&family=Slabo+27px&display=swap" rel="stylesheet">
-        <title>Company Home Page</title>
-        <link rel="stylesheet" type="text/css" href="CSS/CompanyHomePage.css">
+        <title>My Home Page</title>
+        <link rel="stylesheet" type="text/css" href="css/HomePage.css">
     </head>
     <body>
         <div class="navbar">
             <div class="logo"><p>WORK'n'APPOINT</p></div>
             <ul class="test">
                 <li class="list">
-                    <a href="#footer_anchor" class="five" id="con">Contact Us</a>
+                    <button class="btn"><a href="login.html">Login</a></button>
                 </li>
                 <li class="list">
-                  <a href="#about" class="five">About</a>
+                    <button class="btn"><a href="signup.html">Sign Up</a></button>
                 </li>
-                <li class="list">
-                    <button id="all_job_btn">All Jobs </button>
+                <li class="list"><img src="images/person.png" class="t5">
+                <a href="#footer_anchor" class="five" id="con">Contact Us</a>
                 </li>
-                <li class="list">
-                    <button  id="our_job_btn">Our Jobs </button>
+                <li class="list"><img src="images/about.png" class="t5">
+                <a href="#about" class="five">About</a>
                 </li>
-                <li class="list">
-                    <a href="./AddNewJob.html" target="_blank" >Add Jobs</a>
+                <li class="list"><img src="images/find2.jpg" class="t5">
+                <a href="#contact" class="five">Find Jobs</a>
                 </li>
             </ul>
         </div>
@@ -85,24 +85,8 @@
                 &copy;worknappoint.com | Designed By Rahul,Pankaj,Parneet
             </div>
         </div>
-        <script>
-            const allJobBtn = document.getElementById("all_job_btn");
-            const ourJobBtn = document.getElementById("our_job_btn");
-
-            allJobBtn.addEventListener("click", ()=>{
-                allJobBtn.style.fontWeight ="bold";
-                allJobBtn.style.color = "#be1b4c";
-                ourJobBtn.style.fontWeight ="lighter";
-                ourJobBtn.style.color = "#fff";
-            });
-
-            ourJobBtn.addEventListener("click", ()=>{
-                ourJobBtn.style.fontWeight ="bold";
-                ourJobBtn.style.color = "#be1b4c";
-                allJobBtn.style.fontWeight ="lighter";
-                allJobBtn.style.color = "#fff";
-            });
-        </script>
     </body>
-    
+    <script src="js/main.js">
+        
+    </script>
 </html>

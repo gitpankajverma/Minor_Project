@@ -1,0 +1,330 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway',sans-serif;
+}
+        #one div .main
+        {
+           width:100%;
+           height:100%;
+           background-image: url("../images/bg1.png");
+           background-size: cover;
+           background-repeat: no-repeat;
+           display: flex;
+           flex-wrap: wrap;  
+           align-items: center;
+           justify-content: center;
+        }
+        .form_container{
+            width: 100%;
+            max-width: 35rem;
+            margin:5rem auto ;
+            background-image: url("../images/sparkle.jpg");
+            position: relative;
+            padding : 10rem 0; 
+            /*z-index:1;*/
+            border-radius: 1rem;
+            box-shadow: 8px 10px 12px #460a1c;
+        }
+        .back{
+            position: absolute;
+            background-image: url("../images/bg2.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height:20rem;
+            width: 100%;
+            left:0px;
+            top:0px;
+            /*z-index:-1;*/
+            border-radius: 2em;
+            border-bottom-left-radius: 100%;
+            border-bottom-right-radius: 100%; 
+        
+        }
+        #one span.form_heading{
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 2.5rem;
+            color:white;
+            word-spacing: 10px;
+            position: absolute;
+            top: 3.5rem;
+            left : 10rem;
+        }
+        #one form{
+            padding: 15px;
+            border-radius: 1rem;
+            background-color: #f8ccd9; 
+            box-shadow: 8px 10px 12px #460a1c;
+            /*transform: translateX(8rem);*/
+        }
+        .input-group{
+            width:90%;
+            margin:0 auto;
+            position:relative;
+            display:flex;
+            align-items:baseline;
+        }
+        .input-group input{
+            position: relative;
+            background-color: #f8ccd9;
+            width:80%;
+            padding : .5rem 0;
+            margin-top: .5rem;
+            border:none;
+            outline:none;
+            color:#460a1c;
+            font-weight: 500;
+            font-size:20px;
+            border-bottom: 2px solid #460a1c;
+        }
+        
+        .input-group  i{
+            font-size: 1rem;
+            width: 10px;
+            margin-right: 1rem;
+            color:#460a1c;
+        }
+        .create_account_btn{
+            margin:2rem 30% 1rem;
+            padding : .5rem;
+            color:white;
+            font-weight: bold;
+            font-size: 20px;
+            width:250px;
+            height:40px;
+            background-image: radial-gradient(#ac163e,#460a16,#350715);
+            border-radius: 3rem;
+            cursor: pointer;
+        }
+        #switch_login{
+            text-align: center;
+            margin-bottom:2em;
+            font-size: 20px;
+        }
+        span.login_text{
+            color:#460a1c;
+            font-weight: bold;
+            border-bottom:none;
+        }
+        .radio_btn_group input{
+            margin-left: 2rem;
+        }
+        @media screen and (max-width : 600px)
+        {
+            div.back{
+                height: 8rem;
+            }
+            span.form_heading{
+                left:50%;
+                transform: translateX(-50%);
+            }
+            form{
+                border-radius: initial;
+                box-shadow: none;
+                border: 2px solid #460a1c;
+                transform: translateX(2rem);
+                width:400px;
+            }
+            .form_container{
+                margin: 0px;
+            }
+            #abc{
+                display: block;
+                margin-bottom:1rem;
+            }
+        }
+ /*employee-sinup*/
+ #two{
+     /*display: none;*/
+ }
+ #two body{
+    background-image: url("../images/bg1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin:4rem;
+}
+
+#two div.main{
+   margin:auto;
+   display: flex;
+   border: 2px solid #460a16;
+   width: 60%;
+}
+#two div.image{
+   width:35%;
+   background-image:linear-gradient(180deg , black,#460a1c,#9c163e);
+   background-size: cover;
+   background-repeat: no-repeat; 
+}
+.image .tag_line{
+   width:60%;
+   padding:20px;
+   margin: auto;
+   margin-top: 50%;
+   color:pink;
+}
+.image .tag_line .logo{
+   margin:10%;
+   width: 100%;
+   border:2px dashed white;
+   outline: 1px solid pink;
+   padding:10px;
+   font-size: 30px;
+   font-weight: bold;
+}
+#two div h2{
+   text-align: center;
+   margin-top: 40px;
+   font-size: 35px;
+   color:#460a10;
+   text-shadow: 2px 3px 4px #9c163e;
+}
+#two .form_container{
+   width:65%;
+   background-color: wheat;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+#two form{    
+    border: 2px solid #460a10;
+    width:70%;
+    background-color: white;
+    padding:20px 10%; 
+    margin: 20px auto;
+    font-size: 15px;
+    box-shadow: 5px 5px 8px #9c163e;
+}
+#two form .input_group{
+    margin-bottom: 20px;
+    color:#460a10;
+    font-size: 15px;
+    font-weight: bold;
+}
+#two form .input_group input{
+   width:90%;
+   padding:10px;
+   border:2px solid #460a10;
+   font-weight: bold;
+}
+form .input_group .custom_select select{
+    width:90%;
+    padding:10px;
+    border:2px solid #460a10;
+    color:#460a10;
+    font-size:15px;
+    font-weight: bold;
+}
+#two form .input_group .checkbox_group input{
+    margin-right: 10px;
+    padding:0px;
+    width:20px;
+}
+#submit2{
+   margin:auto;
+   padding : .5rem;
+   color:white;
+   font-weight: bold;
+   font-size: 20px;
+   width:150px;
+   height:40px;
+   background-image:  radial-gradient(#ac163e,#460a16,#350715);
+   border-radius: 3rem;
+   cursor: pointer;
+}
+
+/*Employer sinup*/
+#three{
+    background-image: url("../images/bg1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin:4rem;
+    /*display: none;*/
+}
+
+#three div.main{
+    margin:auto;
+    background-color: wheat;
+    width: 40%;
+    padding:1px;
+    padding-bottom: 20px;
+    border: 2px solid #460a10;
+    display: flex;
+    flex-direction: column;
+}
+#three .top_background{
+    background-image: url("../images/bg2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:150px;
+    width:100%;
+    padding:40px;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+}
+#three .heading{
+    font-weight: bold;
+    font-size: 30px;
+    color:white;
+    word-spacing: 10px;
+    margin-left: 25%;
+}
+#three .form{
+    width:90%;
+    padding:20px;
+    padding-left:10%;
+    margin: auto;
+}
+#three form .input_group , .address{
+     margin: .5px;
+     margin-bottom: 10px;
+     color:#460a10;
+     font-size: 15px;
+     font-weight: bold;
+ }
+#three form .text_area .desc{
+     border:2px solid #460a10;
+     border-radius: 10px;
+     width:80%;
+     margin: .5px;
+     margin-bottom: 20px;
+     color:#460a10;
+     font-size: 15px;
+     font-weight: bold;
+     padding: 20px;
+ }
+#three form .input_group input , .address input[name="street_address"] , .address input[name="city"]{
+    width:80%;
+    padding:10px;
+    border:2px solid #460a10;
+    font-weight: bold;
+    border-radius: 10px;
+ }
+ 
+#three select{
+     width:40%;
+     padding:10px;
+     border:2px solid #460a10;
+     border-radius: 10px;
+     color:#460a10;
+     font-size:15px;
+     font-weight: bold;
+ }
+#three form .input_group .checkbox_group input{
+     margin-right: 10px;
+     padding:0px;
+     width:20px;
+ }
+ #submit3{
+    margin:auto;
+    padding : .5rem;
+    color:white;
+    font-weight: bold;
+    font-size: 20px;
+    width:150px;
+    height:40px;
+    background-image:  radial-gradient(#ac163e,#460a16,#350715);
+    border-radius: 3rem;
+    cursor: pointer;
+ }

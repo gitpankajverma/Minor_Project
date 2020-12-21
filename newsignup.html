@@ -1,0 +1,381 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/newsignup.css">
+        <title>Main</title>
+    </head>
+    <body>
+        <div id="one">
+            <!-- signup-->
+                <div class="main">
+                    <div class="form_container">
+                        <div class="back"></div>
+                        <span class="form_heading"> Sign up </span>
+                        <form>
+                            <div class="input-group">
+                                <i class="fa fa-address-book-o"></i>
+                                <input type="text" name="user_name"  value=""id="username" placeholder="Enter your good name"/>
+                            </div>
+                            <div class="input-group">
+                                <i class="fa fa-envelope"></i>
+                                <input type="email" name="email" value="" id="email" placeholder="Enter your email-id"/>
+                            </div>
+                            <div class="input-group">
+                                <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                                <input type="password" name="password" value="" id="password" placeholder="Enter password"/>
+                            </div>
+                            <div class="input-group">
+                                <i class="fa fa-unlock-alt"></i>
+                                <input type="password" name="password" value="" id="confirmpassword" placeholder="Re-enter the password"/>
+                            </div>
+                            <div class="input-group">
+                                <i class="fa fa-phone-square" aria-hidden="true"></i>
+                                <input type="text" name="contact_no" value="" id="contactno" placeholder="Enter contact number"/>
+                            </div>
+                            <br/>
+                            <div class="radio_btn_group">
+                                <span id="abc" style="font-size: 20px; margin-left:4rem;"> Identiy Yourself </span> 
+                                <input type="radio" id="job_seeker" name="role" /> Job Seeker
+                                <input type="radio" id="job_provider" name="role" /> Job Provider
+                            </div>
+                            <input type="button" value="Create Account" id="submit1" class="create_account_btn" />
+                            <div id="switch_login">
+                                Already have an account? <a href="./Login_Page.html"><span class="login_text">Login</span></a>
+                            </div>
+                        </form>
+                    </div>
+                </div>  
+        </div>
+        <div id="two">
+            <!--employee Sinup-->
+            <div class="main">
+                <div class="image">
+                    <div class="tag_line">
+                        <div class="logo">
+                           <p>Work
+                                   &nbsp;'n'
+                                   Appoint </p> 
+                        </div>
+                        <h6 style="margin:10%; word-spacing: 2px;">The Only Way To Do GREAT WORK Is To LOVE What You Do</h6> 
+                    </div>
+                </div>
+                <div class="form_container"> 
+                    <h2 >Create Your Account</h2>
+                    <form>
+                      <div class="input_group">
+                        <label>Gender</label>
+                        <div class="custom_select">
+                          <select id="gender">
+                            <option value="">Select</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                          </select> 
+                        </div>     
+                      </div>
+                      <div class="input_group">
+                        <label>Date of Birth</label>
+                        <br/>
+                        <input type="date" class="dob" id="dob"/>
+                      </div>
+                      <div class="input_group">
+                        <label>Qualification</label>
+                        <div class="custom_select">
+                            <select id="qualification">
+                                <option> Choose Your qualification</option>
+                                <option value="ten">10th</option>
+                                <option value="twelve">12th</option>
+                                <option value="diploma">Diploma</option>
+                                <option value="garduation">Graduation</option>
+                                <option value="post_graduation">Post Graduation</option>
+                            </select>
+                        </div>
+                      </div >
+                      <div class="input_group">
+                          <label>Specialization</label><br/>
+                            <input type="text" class="specialization" placeholder="e.g:- B.tech CSE" id="specialization"/>
+                      </div>
+                      <div class="input_group">
+                          <label><b>Skills</b></label>
+                          <div class="checkbox_group">
+                              <input type="checkbox" class="skills" value="c"/> C <br>
+                              <input type="checkbox" class="skills" value="c++"/> C++ <br> 
+                              <input type="checkbox" class="skills" value="java"/> Java <br>
+                              <input type="checkbox" class="skills" value="python"/> Python <br>
+                              <input type="checkbox" class="skills" value="html"/> HTML <br>
+                              <input type="checkbox" class="skills" value="css"/> CSS <br>
+                              <input type="checkbox" class="skills" value="js"/> Javascript<br>
+                              <input type="checkbox" class="skills" value="cloud_computing"/> Cloud computing<br>
+                              <input type="checkbox" class="skills" value="django"/> Django <br>
+                              <input type="checkbox" class="skills" value="react_js"/> React.js<br>
+                              <input type="checkbox" class="skills" value="node_js"/> Node.js<br>
+                              <input type="checkbox" class="skills" value="machine_learning"/> Machine Learning<br>
+                              <input type="checkbox" class="skills" value="flutter" /> Flutter<br>
+                              <input type="checkbox" class="skills" value="php"/> PHP<br>
+                              <input type="checkbox" class="skills" value="angular"/> Angular<br>
+                              <input type="checkbox" class="skills" value="mern_stack"/> MERN<br>
+                              <input type="checkbox" class="skills" value="mean_stack" /> MEAN <br>
+                          </div>
+                      </div>
+                      <div class="input_group">
+                        <label>Years of experience </label>
+                        <input type="number" min="1" max="100" step="1"? id="yoe"/>
+                      </div>
+                      <div class="input_group">
+                        <label>Address </label><br/>
+                        <input type="text" placeholder="City"id="address" /><br><br>
+                        <div class="custom_select">
+                            <select id="country">
+                              <option value="">Select Country</option>
+                              <option value="india">India</option>
+                              <option value="usa">USA</option>
+                              <option value="china">China</option>
+                              <option value="japan">Japan</option>
+                              <option value="brazil">Brazil</option>
+                              <option value="nepal">Nepal</option>
+                              <option value="canada">Canada</option>
+                              <option value="germany">Germany</option>
+                              <option value="australia">Australia</option>
+                              <option value="sri_lanka">Sri Lanka</option>
+                              <option value="Bangladesh">Bangladesh</option>
+                            </select> 
+                        </div>
+                      </div>
+                      <div class="input_group">
+                        <input type="checkbox" name="t&c" id="conditions" style=" margin-right: 4px; width:20px;"/>
+                        <a class="t&c_anchor" href="">Accept the terms and conditions. </a>
+                      </div>
+                      <input type="button" value="Sign Up" id="submit2" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="three">
+            <!--Employeer Sinup-->
+            <div class="main">
+                <div class="top_background">
+                     <span class="heading">Create Account</span>
+                </div>
+                <form>
+                    <div class="form">
+                        <div class="input_group">
+                            <label>Company Name</label><br/>
+                            <input type="text" value=""name="company_name" id="company_name"/>
+                        </div>
+                        <div class="text_area">
+                            <label><b>Company's Description</b></label><br/>
+                            <textarea class="desc" value=""name="description" id="conpany_description"> </textarea>
+                        </div>
+                        <div class="input_group">
+                            <label>Certifications (if any)</label><br>
+                            <input type="text" name="certifications" id="certifications"/>
+                        </div>
+                        <div class="input_group">
+                            <label>Years in Business</label><br/>
+                            <input type="number" name="years_in_business" min="0" max="100"id="company_years"/>
+                        </div>
+                        <div class="address">
+                            <label>Address</label>
+                            <br/>
+                            <input type="text" name="street_address" id="company_address"/><br><br>
+                            <select class="country" id="company_country">
+                                <option value="">Select Country</option>
+                                <option value="india">India</option>
+                                <option value="usa">USA</option>
+                                <option value="china">China</option>
+                                <option value="japan">Japan</option>
+                                <option value="brazil">Brazil</option>
+                                <option value="nepal">Nepal</option>
+                                <option value="canada">Canada</option>
+                                <option value="germany">Germany</option>
+                                <option value="australia">Australia</option>
+                                <option value="sri_lanka">Sri Lanka</option>
+                                <option value="Bangladesh">Bangladesh</option>
+                              </select> 
+                            <br>
+                            <label style="margin-left: 40%;" >Country</label>
+                        </div>
+                        <div class="input_group">
+                            <input type="checkbox" name="t&c" id="company_conditions"style=" margin-right:4px; width:20px;"/>
+                            <a class="t&c_anchor" href="">Accept the terms and conditions. </a>
+                        </div>
+                        <input type="submit" value="Sign Up" id="submit3" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+    <script>
+           var submit1=document.getElementById("submit1");
+           var a=document.getElementById("one");
+           var b=document.getElementById("two");
+           var c=document.getElementById("three");
+           var obj=new Object();
+           submit1.addEventListener("click",function()
+           {
+
+               console.log("called");
+                var name= document.getElementById("username").value;
+                console.log(name);
+                var email= document.getElementById("email").value;
+                var password= document.getElementById("password").value;
+                var confirmPassword = document.getElementById("confirmpassword").value;
+                var contact= document.getElementById("contactno").value;
+                if(confirmPassword !== password)
+                {
+                    document.getElementById("confirmpassword").value="Please mention right password"
+                }
+                else
+                {
+                    obj.username= name;
+                    obj.emailid = email;
+                    obj.password = password;
+                    obj.contact_no =contact;
+                    console.log("object is "+obj);
+                    if(document.getElementById("job_seeker").checked)
+                    {
+                        obj.flag="job_seeker";
+                        a.style.display="none";
+                        b.style.display="block";
+                        c.style.display="none";
+                    }
+                    else if(document.getElementById("job_provider").checked)
+                    {
+                    obj.flag="job_provider";
+                    a.style.display="none";
+                    c.style.display="block";
+                    b.style.display="none";
+                    }
+                }   
+           });
+           var submit2=document.getElementById("submit2");
+           submit2.addEventListener("click",add_user);
+           function add_user()
+           {
+               let gender=document.getElementById("gender");
+               if(gender.selectedIndex!=0)
+               {
+                 obj.gender=gender[gender.selectedIndex].value;
+                 console.log(obj.gender);
+                 obj.dob=document.getElementById("dob").value;
+                 if(obj.dob!="")
+                 {
+                    let qualification=document.getElementById("qualification");
+                    if(qualification.selectedIndex!=0)
+                    {
+                       obj.qualification=qualification[qualification.selectedIndex].value;
+                       obj.specialization=document.getElementById("specialization").value;
+                       let skill_arr=document.getElementsByClassName("skills");
+                       //console.log(skill_arr);
+                       obj.skill=[];
+                       for(let i=0;i<=skill_arr.length-1;i++)
+                       {
+                           if(skill_arr[i].checked==true)  
+                           obj.skill.push(skill_arr[i]);
+                       }   
+                           obj.experience=document.getElementById("yoe").value;
+                           let country=document.getElementById("country");
+                           let address=document.getElementById("address").value;
+                           if(country.selectedIndex!=0)
+                           {
+                            obj.country=country[country.selectedIndex].value;
+                            if(document.getElementById("conditions").checked==true)
+                            {
+                                console.log(obj);
+                                send_to_server(obj);
+                            }
+                            else
+                            {
+                                alert("please choose conditions ");
+                            }
+                           }
+                           else
+                           {
+                               alert("select a country");
+                           }
+                    }
+                    else
+                    {
+                        alert("select a qualification");
+                    }
+                }  
+                 else
+                 {
+                     alert("please select a dob");
+
+                 }
+               }
+               else
+               {
+                   alert("please select a gender ");
+
+               }
+           }
+           document.getElementById("submit3").addEventListener("click",add_company);
+           function add_company()
+           {
+               obj.flag=1;
+               let name=document.getElementById("company_name");
+               if(name.value!="")
+               {
+                 obj.company_name=name;
+                 let desc=document.getElementById("company_name");
+                 if(desc.value!="")
+                 {
+                      obj.company_desc=document.getElementById("desc");
+                      obj.certifications=document.getElementById("certifications").value;
+                      obj.yob=document.getElementById("company_years").value;
+                      obj.company_address=document.getElementById("company_address");
+                      let company_country=document.getElementById("company_country");
+                           if(company_country.selectedIndex!=0)
+                           {
+                            obj.company_country=company_country[company_country.selectedIndex].value;
+                            if(document.getElementById("conditions").checked==true)
+                            {
+                                console.log(obj);
+                                send_to_server(obj);
+                            }
+                            else
+                            {
+                                alert("please choose conditions ");
+                            }
+                           }
+                           else
+                           {
+                               alert("select a country");
+                           }
+                 }
+                 else
+                 {
+                    alert("please enter some description");
+                 }
+               }
+               else
+               {
+                  alert("please select a compnay name");
+               }
+           }
+           function send_to_server(objec)
+           {
+                var xhttp=new XMLHttpRequest();
+                xhttp.onreadystatechange = function() 
+                {
+                    if (this.readyState == 4 && this.status == 200) 
+                    {
+                        //console.log("called"+this.responseText)
+                        var a=JSON.parse(this.responseText);
+                        console.log("a is "+a.result);
+                        if(a.result==1)
+                        {
+                            alert("job saved successfully");      
+                        }
+                        else
+                        {
+                            alert("error");
+                        }
+                    } 
+                };
+                xhttp.open("POST","/addjob",true);
+                xhttp.setRequestHeader("Content-Type","application/json;charset=UTF-8");
+                xhttp.send(JSON.stringify(objec));
+           }
+    </script>
+</html>

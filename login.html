@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Login Page</title>
+        <link rel="stylesheet" type="text/css" href="css/login.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Advent+Pro&family=Slabo+27px&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="main_div">
+            <nav class="box">
+                <h1>Login</h1>
+                <input type="text" name="email" placeholder="Enter Your E-Mail" class="test" id="email">
+                <input type="password" placeholder="Enter password" name="password" class="test" id="password">
+                <input type="submit" name="" value="Login" class="btn" id="submit">
+            </nav>
+        </div>
+    </body>
+    <script>
+         var btn=document.getElementById("submit");
+         btn.addEventListener("click",function()
+         {
+             console.log("called");
+            var email=document.getElementById("email").value;
+            console.log(email);
+            var password=document.getElementById("password").value;
+            var xhttp=new XMLHttpRequest();
+            xhttp.onreadystatechange = function() 
+            {
+              (this.readyState == 4 && this.status == 200) 
+              {
+                console.log("called"+this.response)
+                if(this.responseText)
+                {
+                    var a=JSON.parse(this.responseText);
+                    console.log("a is "+this.responseText);
+                    if(a.result=="Wrong password")
+                    {
+                    alert("wrong password");      
+                    }
+                    else if(a.result=="user not present")
+                    {
+                        alert("user not present");
+                    }
+                    else{
+                        alert("login successfully");
+                        window.location="/home2.html";
+                    }
+                }    
+              } 
+            };
+            xhttp.open("GET","/login?email="+email+"&password="+password+"",true);
+            xhttp.send();
+        });  
+    </script>
+</html>

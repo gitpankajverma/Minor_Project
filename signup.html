@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">/>
+    <link rel="stylesheet" href="css/signup.css"/>
+</head>
+<body>
+    <section>
+        <div class="main">
+            <div id="msg">
+                 
+            </div>    
+            <div class="form_container">
+                <div class="back"></div>
+                <span class="form_heading"> Sign up </span>
+                <form action="/signup" method="GET">
+                    <div class="input-group">
+                        <i class="fa fa-address-book-o" aria-hidden="true"></i>
+                        <input type="text" name="user_name" placeholder="Enter your good name"/>
+                    </div>
+                    <div class="input-group">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <input type="email" name="email" placeholder="Enter your email-id"/>
+                    </div>
+                    <div class="input-group">
+                        <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                        <input type="password" name="password" placeholder="Enter password"/>
+                    </div>
+                    <div class="input-group">
+                        <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                        <input type="password" name="repassword" placeholder="Re-enter the password"/>
+                    </div>
+                    <div class="input-group">
+                        <i class="fa fa-phone-square" aria-hidden="true"></i>
+                        <input type="text" name="contact_no" placeholder="Enter contact number"/>
+                    </div>
+                    <div class="input-group">
+                        <i class="fa fa-university" aria-hidden="true"></i>
+                        <input type="text" name="city" placeholder="Enter city"/>
+                    </div>
+                    <input type="submit" value="Sign up" class="sign_up_btn" />
+                    <div id="switch_login">
+                        Already have an account? <a href="./login.html"><span class="login_text">Login</span></a>
+                    </div>
+                </form>
+            </div>
+        </div>  
+    </section>
+</body>
+</html>

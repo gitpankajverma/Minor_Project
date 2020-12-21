@@ -38,19 +38,19 @@
             color:#460a10;
             text-shadow: 2px 3px 4px #9c163e;
         }
-        form .input_group{
+        nav .input_group{
              margin-bottom: 20px;
              color:#460a10;
              font-size: 18px;
              font-weight: bold;
              margin-left: 10%;
          }
-         form .input_group input{
+         nav .input_group input{
             width:90%;
             padding:10px;
             border:2px solid #460a10;
          }
-         form .input_group .job_desc
+         nav .input_group .job_desc
          {
             width:90%;
             height: 70px;
@@ -59,7 +59,7 @@
             font-size: 16px;
             border:2px solid #460a10;
          }
-         form .input_group .checkbox_group input{
+         nav .input_group .checkbox_group input{
              margin-right: 10px;
              padding:0px;
              width:20px;
@@ -81,47 +81,87 @@
 <body id="root">
     <div class="mainDiv">
         <h2 >Add New Job</h2>
-        <form>
+        <nav>
             <div class="input_group">
                 <label>Job Title</label><br/>
-                  <input type="text" class="job_title"  />
+                  <input type="text" class="job_title" id="title" name="subject"/>
             </div>
             <div class="input_group">
                 <label>Job Description</label><br/>
-                  <textarea class="job_desc" value="Enter The Job description here"> </textarea>
+                  <textarea class="job_desc" id="desc" value="Enter The Job description here"> </textarea>
             </div>
             <div class="input_group">
                 <label><b>Skills</b></label>
                 <div class="checkbox_group">
-                    <input type="checkbox" value="c" name="c" /> C <br>
-                    <input type="checkbox" value="c++" name="c++"/> C++ <br> 
-                    <input type="checkbox" value="java" name="java"/> Java <br>
-                    <input type="checkbox" value="python" name="python"/> Python <br>
-                    <input type="checkbox" value="html" name="html"/> HTML <br>
-                    <input type="checkbox" value="css" name="css"/> CSS <br>
-                    <input type="checkbox" value="js" name="js"/> Javascript<br>
-                    <input type="checkbox" value="cloud_computing" name="cc"/> Cloud computing<br>
-                    <input type="checkbox" value="django" name="django"/> Django <br>
-                    <input type="checkbox" value="react_js" name="react" /> React.js<br>
-                    <input type="checkbox" value="node_js" name="node" /> Node.js<br>
-                    <input type="checkbox" value="machine_learning" name="machine_learning" /> Machine Learning<br>
-                    <input type="checkbox" value="flutter" name="flutter"/> Flutter<br>
-                    <input type="checkbox" value="php" name="php"/> PHP<br>
-                    <input type="checkbox" value="angular" name="angular"/> Angular<br>
-                    <input type="checkbox" value="mern_stack" nam="mern"/> MERN<br>
-                    <input type="checkbox" value="mean_stack" name="mean"/> MEAN <br>
+                    <input type="checkbox" class="skills" value="c" name="c" /> C <br>
+                    <input type="checkbox" class="skills" value="c++" name="c++"/> C++ <br> 
+                    <input type="checkbox" class="skills" value="java" name="java"/> Java <br>
+                    <input type="checkbox" class="skills" value="python" name="python"/> Python <br>
+                    <input type="checkbox" class="skills" value="html" name="html"/> HTML <br>
+                    <input type="checkbox" class="skills" value="css" name="css"/> CSS <br>
+                    <input type="checkbox" class="skills" value="js" name="js"/> Javascript<br>
+                    <input type="checkbox" class="skills" value="cloud_computing" name="cc"/> Cloud computing<br>
+                    <input type="checkbox" class="skills" value="django" name="django"/> Django <br>
+                    <input type="checkbox" class="skills" value="react_js" name="react" /> React.js<br>
+                    <input type="checkbox" class="skills" value="node_js" name="node" /> Node.js<br>
+                    <input type="checkbox" class="skills" value="machine_learning" name="machine_learning" /> Machine Learning<br>
+                    <input type="checkbox" class="skills" value="flutter" name="flutter"/> Flutter<br>
+                    <input type="checkbox" class="skills" value="php" name="php"/> PHP<br>
+                    <input type="checkbox" class="skills" value="angular" name="angular"/> Angular<br>
+                    <input type="checkbox" class="skills" value="mern_stack" nam="mern"/> MERN<br>
+                    <input type="checkbox" class="skills" value="mean_stack" name="mean"/> MEAN <br>
                 </div>
             </div>
             <div class="input_group">
               <label>Years of experience </label>
-              <input type="number" name="yoe" min="1" max="100" step="1"? />
+              <input type="number" id="yoe" name="yoe" min="0" max="100" step="1"? />
             </div>
             <div class="input_group">
                 <label>CTC</label><br/>
-                  <input type="text" name="ctc" class="ctc" placeholder="Salary Amount" />
+                  <input type="text" id="ctc" name="ctc" class="ctc" placeholder="Salary Amount" />
             </div>
             <input type="submit" value="Add Job" id="add_job_btn" />
-        </form>
+        </nav>
     </div>
 </body>
+<script>
+    var btn=document.getElementById("add_job_btn");
+    btn.addEventListener("click",function1);
+    function function1()
+    {
+        var obj=new Object();
+        obj.subject=document.getElementById("title").value;
+        obj.desc=document.getElementById("desc").value;
+        var skill=document.getElementsByClassName("skills");
+        obj.skills=[];
+        for(let i=0;i<=skill.length-1;i++)
+        {
+            if(skill[i].checked==true)
+            obj.skills[obj.skills.length]=skill[i].value;
+        }
+        obj.experience=document.getElementById("yoe").value;
+        obj.ctc=document.getElementById("ctc").value;
+        var xhttp=new XMLHttpRequest();
+        xhttp.onreadystatechange = function() 
+        {
+            if (this.readyState == 4 && this.status == 200) 
+            {
+                //console.log("called"+this.responseText)
+                var a=JSON.parse(this.responseText);
+                console.log("a is "+a.result);
+                if(a.result==1)
+                {
+                   alert("job saved successfully");      
+                }
+                else
+                {
+                    alert("error");
+                }
+            } 
+        };
+        xhttp.open("POST","/addjob",true);
+        xhttp.setRequestHeader("Content-Type","application/json;charset=UTF-8");
+        xhttp.send(JSON.stringify(obj));
+    }    
+</script>
 </html>
